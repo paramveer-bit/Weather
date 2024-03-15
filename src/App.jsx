@@ -7,7 +7,7 @@ import React,{useState,useEffect} from "react"
 import { Result } from "postcss"
 import axios from "axios"
 
-
+//Weather app
 
 const api = {
   key : "0b606e3bcdd757062335667339f18f6c",
@@ -28,6 +28,8 @@ const image = {
   clear : sun,
   thunderstorm : thunder
 }
+
+
 
 var temp = ""
 function App(){
