@@ -96,16 +96,16 @@ function App(){
   },[city])
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-[#0093E9] to-[#96E9C6] text-white">
-      <div className="text-5xl w-full text-center py-7 font-semibold flex justify-between px-40">
+    <div className="w-full sm:min-h-screen bg-gradient-to-br from-[#0093E9] to-[#96E9C6] text-white">
+      <div className="text-5xl w-full text-center py-7 font-semibold sm:flex justify-between sm:px-40">
         <div></div>
         <div>Weather App</div>
-        <div className="w-[20%] text-xl">
+        <div className=" mt-3 sm:w-[20%] text-xl">
           <input 
             type="text" 
             placeholder="City Name" 
             name = "search"
-            className=" w-full h-full rounded-xl border-none bg-white/20 text-center placeholder:text-white outline-none focus:outline-slate-300"
+            className=" w-[70%] py-2 sm:w-full h-full rounded-xl border-none bg-white/20 text-center placeholder:text-white outline-none focus:outline-slate-300"
             value = {pincode}
             onChange = {e=>
               setpincode(e.target.value)
@@ -122,11 +122,11 @@ function App(){
             {console.log(pincode)}
           </div>
       </div>
-      <div className=" w-[80%] h-[500px] flex p-2 mx-auto gap-4">
+      <div className=" w-full sm:w-[80%] sm:h-[500px] sm:flex-row sm:flex p-2 mx-auto gap-4 px-4 sm:px-2">
 
-        <div className="flex flex-col gap-4 w-[30%]">
+        <div className="flex flex-col gap-4 sm:w-[30%]">
           {/* Local Weather Report */}
-          <div className="h-[50%] w-full  rounded-lg bg-white/20 ">
+          <div className="sm:h-[50%] w-full  rounded-lg bg-white/20 ">
             <h1 className="text-center pt-4 font-semibold text-2xl divide-x-10 overflow-hidden max-h-[20%]">LOCAL WEATHER REPORT</h1>
             <hr className=" align-text-bottom mx-7 border-5"></hr>
             <div className="flex w-full h-full p-5">
@@ -170,15 +170,15 @@ function App(){
         </div>
 
         {/* Days DIV */}
-        <div className="w-[70%] p-3 h-full rounded-lg bg-white/20 flex  flex-col justify-evenly text-xl font-semibold divide-x-2 md:flex-row">
+        <div className="mt-3 sm:mt-0 sm:w-[70%] p-3 justify-center h-full rounded-lg bg-white/20 flex flex-col  sm:flex-row sm:justify-evenly text-xl font-semibold sm:divide-x-2">
           {forcast.day.map((day,i)=>{
             return(
-              <div className="w-[20%] p-2 text-center">
+              <div className="flex sm:flex-col justify-between items-center sm:w-[20%] p-2 text-center sm:pt-5">
                 <span className=" max-lg:text-sm">{day}</span>
-                <img src={image[forcast.weat[i].toLowerCase()]} className="h-25 py-20" />  
-                {forcast.tempCel[i]} &#8451; 
+                <img src={image[forcast.weat[i].toLowerCase()]} className=" h-20 sm:w-20 sm:h-25  " />  
+                <span className="sm:pb-5">{forcast.tempCel[i]} &#8451; 
                 <br/>
-                {forcast.tempFar[i]} &#8457;
+                {forcast.tempFar[i]} &#8457;</span>
               </div>
             )
           })}
