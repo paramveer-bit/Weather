@@ -138,7 +138,7 @@ function App(){
               <div className=" space-y-5">
                 {/* Day */}
                 <div className=" text-2xl w-full text-center p">
-                  <span className="font-bold mx-auto">SUNDAY</span>
+                  <span className="font-bold mx-auto">{forcast.day[0]}</span>
                   <br /> 
                   <span className="text-lg font-semibold">{weather.weat}</span>
                 </div>
