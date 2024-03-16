@@ -87,7 +87,7 @@ function App(){
           setForcast({day,tempCel,tempFar,weat});
           // window.location.reload()
           setpincode("")
-          console.log(result);
+          // console.log(result);
         }
       );
       
@@ -119,7 +119,6 @@ function App(){
               }
             }}
             />
-            {console.log(pincode)}
           </div>
       </div>
       <div className=" w-full sm:w-[80%] sm:h-[500px] sm:flex-row sm:flex p-2 mx-auto gap-4 px-4 sm:px-2">
@@ -132,7 +131,7 @@ function App(){
             <div className="flex w-full h-full p-5">
               {/* Image */}
               <div className=" w-[60%] h-[70%] ">
-                <img src={sun} alt="" className="h-full w-full pt-3"/>
+                <img src={image[forcast.weat[0].toLowerCase()]} alt="" className="h-full w-full pt-3"/>
               </div>
 
               <div className=" space-y-5">
