@@ -4,6 +4,7 @@ import rain from "./assets/rain-svgrepo-com.svg"
 import cloudy from "./assets/cloudy-forecast-svgrepo-com.svg"
 import thunder from "./assets/rain-forecast-svgrepo-com.svg"
 import React,{useState,useEffect} from "react"
+import haze from "./assets/windy-wind-svgrepo-com.svg"
 import { Result } from "postcss"
 import axios from "axios"
 
@@ -26,7 +27,8 @@ const image = {
   mist : cold,
   clouds : cloudy,
   clear : sun,
-  thunderstorm : thunder
+  thunderstorm : thunder,
+  haze : haze
 }
 
 
@@ -131,7 +133,7 @@ function App(){
             <div className="flex w-full h-full p-5">
               {/* Image */}
               <div className=" w-[60%] h-[70%] ">
-                <img src={image[forcast.weat[0].toLowerCase()]} alt="" className="h-full w-full pt-3"/>
+                <img src={image[weather.weat.toLowerCase()]} alt="" className="h-full w-full pt-3"/>
               </div>
 
               <div className=" space-y-5">
